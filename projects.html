@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Bryce Barrineau</title>
+
+    </head>
+    <body style="background-color: #006D77;">
+        <div class="navBar">
+            <div></div>
+            <div></div>
+            <div><a class = "navButton" href="index.html">Home</a></div>
+        </div>
+        <div class="projectsBody">
+            <div class="projectWrapper", id="potatoNIR">
+                <div class="textCard">
+                    <H1 class="textCardTitle">Predicting Specific Gravity in Potatoes Using Near-Infrared Spectroscopy</H1>
+                    <p class = textCardBody>This project focused on predicting the specific gravity of potatoes, which is closely related to starch content, using Near-Infrared (NIR) spectroscopy data. Specific gravity is a key quality indicator in potatoes, traditionally measured through labor-intensive methods. To automate this process, I built a machine learning pipeline to analyze the spectral data and estimate specific gravity values.Key steps included preprocessing the NIR data using Savitzky-Golay derivatives and Multiple Scatter Correction (MSC) to reduce noise and improve signal quality. For feature reduction, I applied Principal Component Analysis (PCA) and K-means clustering to group similar spectral profiles. The predictive model was built using Partial Least Squares (PLS) regression, which was evaluated through cross-validation to ensure robustness.</p>
+                </div>
+                <div class="stackCard">
+                    <div class="Tab">
+                        <div class="tabLink" onclick="openTab(event, 'potatoNIR', 'NIRStack')">Stack</div>
+                        <div class="tabLink" onclick="openTab(event, 'potatoNIR', 'NIRResults')">Results</div>
+                    </div>
+                    <div class="tabContent" id="NIRStack">
+                        <div style="margin-bottom: 2%;">
+                            <h3>Languages</h3>
+                            <p>Python</p>
+                        </div>
+                        <div>
+                            <h3>Packages</h3>
+                            <p>Numpy, Pandas, MatPlotLib, Seaborn,  SciPy, SciKitLearn</p>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="NIRResults">
+                        While the model was successfully developed and the data pipeline established, the results did not reveal a clear correlation between the NIR spectra and specific gravity in this dataset. Potential factors such as excessive noise, incorrect data collection processes, or suboptimal wavelength selection likely impacted the model’s performance. Despite these challenges, the system has been fully set up, meaning that when more accurate data becomes available in the next season, it can be seamlessly integrated to produce reliable predictions.
+                    </div>
+                </div>
+                <div class="photoCard">
+                    <div class="photoWrapper">
+                        <img  class="projImg" src="Images\Wavelengths.png" id="First" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images\PLS.png" id="second" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images\PCR.png" id="third" onclick="this.requestFullscreen()">
+                    </div>
+                    <div class="photoTabs">
+                        <div class="photoLink" onclick="openImage(event, 'potatoNIR', 'First')">1</div>
+                        <div class="photoLink" onclick="openImage(event, 'potatoNIR', 'second')">2</div>
+                        <div class="photoLink" onclick="openImage(event, 'potatoNIR', 'third')">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectWrapper", id="treeTags">
+                <div class="textCard">
+                    <H1 class="textCardTitle">Automated Image-Based Recognition of Orange Tree ID Tags Using CNNs and OCR</H1>
+                    <p class = textCardBody>In this project, I developed an automated system to recognize and catalog ID tags on orange trees using Convolutional Neural Networks (CNNs) and Optical Character Recognition (OCR). The main challenge was to create an efficient, scalable solution for identifying small, often weathered tags amidst complex outdoor environments. By leveraging a VGG16 architecture, pre-trained on ImageNet and fine-tuned for the task, I was able to achieve high accuracy in image classification.</p>
+                </div>
+                <div class="stackCard">
+                    <div class="Tab">
+                        <div class="tabLink" onclick="openTab(event, 'treeTags', 'tagStack')">Stack</div>
+                        <div class="tabLink" onclick="openTab(event, 'treeTags', 'tagResults')">Results</div>
+                    </div>
+                    <div class="tabContent" id="tagStack">
+                        <div style="margin-bottom: 2%;">
+                            <h3>Languages</h3>
+                            <p>Python</p>
+                        </div>
+                        <div>
+                            <h3>Packages</h3>
+                            <p>Numpy, Pandas, MatPNumpy, Pandas, OpenCV, Albumentations, PIL, TensorFlow, Keras, SciKitLearn, OpenPyXL, Plotly, MatplotLib, Seaborn,  SciPy, SciKitLearn, Pytesseract</p>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="tagResults">
+                        The result was a series of models that could accurately recognize and log the tree IDs with minimal manual intervention, significantly reducing the time spent on fieldwork and improving data reliability.
+                    </div>
+                    </div>
+                    <div class="photoCard">
+                        <div class="photoWrapper">
+                            <img  class="projImg" src="Images\Tag1.png" id="One" onclick="this.requestFullscreen()">
+                            <img  class="projImg" src="Images\Tag2.png" id="Two" onclick="this.requestFullscreen()">
+                            <img  class="projImg" src="Images\Tag3.png" id="Three" onclick="this.requestFullscreen()">
+                        </div>
+                        <div class="photoTabs">
+                            <div class="photoLink" onclick="openImage(event, 'treeTags', 'One')">1</div>
+                            <div class="photoLink" onclick="openImage(event, 'treeTags', 'Two')">2</div>
+                            <div class="photoLink" onclick="openImage(event, 'treeTags', 'Three')">3</div>
+                        </div>
+                    </div>
+                </div>
+            <div class="projectWrapper", id="disIndex">
+                <div class="textCard">
+                    <H1 class="textCardTitle">Automated Image-Based Scoring of Citrus Tree Health Using Regression CNNs</H1>
+                    <p class = textCardBody>In this project, I developed a regression Convolutional Neural Network (CNN) model to visually score the health of citrus trees from images on a scale of 1-20. Higher scores represent trees severely affected by Huanglongbing (HLB), while lower scores indicate healthier trees with minimal disease progression. The model was trained on human-assessed scores, previously done manually in the lab, making the process highly labor-intensive. By automating this task, I drastically reduced the time required for evaluation and improved the consistency of disease assessment.</p>
+                </div>
+                <div class="stackCard">
+                    <div class="Tab">
+                        <div class="tabLink" onclick="openTab(event, 'disIndex', 'indexStack')">Stack</div>
+                        <div class="tabLink" onclick="openTab(event, 'disIndex', 'indexResults')">Results</div>
+                    </div>
+                    <div class="tabContent" id="indexStack">
+                        <div style="margin-bottom: 2%;">
+                            <h3>Languages</h3>
+                            <p>Python</p>
+                        </div>
+                        <div>
+                            <h3>Packages</h3>
+                            <p>Numpy, Pandas, MatPlotLib, Seaborn, SciPy, SciKitLearn, OpenCV, Albumentations, PIL, TensorFlow, Keras, Plotly, Seaborn</p>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="indexResults">
+                        The resulting model accurately scored citrus tree health based on visual indicators, significantly reducing manual labor in disease progression scoring and providing a more efficient solution for analyzing large datasets of tree images. This automation allowed us to process thousands of images quickly, enhancing both productivity and data reliability in the lab.
+                    </div>
+                    </div>
+                    <div class="photoCard">
+                        <div class="photoWrapper">
+                            <img  class="projImg" src="Images\HealthyTree.png" id="Eins" onclick="this.requestFullscreen()">
+                            <img  class="projImg" src="Images\FruitTree.png" id="Swei" onclick="this.requestFullscreen()">
+                            <img  class="projImg" src="Images\DeadTree.png" id="Drei" onclick="this.requestFullscreen()">
+                        </div>
+                        <div class="photoTabs">
+                            <div class="photoLink" onclick="openImage(event, 'disIndex', 'Eins')">1</div>
+                            <div class="photoLink" onclick="openImage(event, 'disIndex', 'Swei')">2</div>
+                            <div class="photoLink" onclick="openImage(event, 'disIndex', 'Drei')">3</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

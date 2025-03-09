@@ -14,6 +14,49 @@
             <div><a class = "navButton" href="index.html">Home</a></div>
         </div>
         <div class="projectsBody">
+            <div class="projectWrapper", id="apartments">
+                <div class="textCard">
+                    <H1 class="textCardTitle">Analysis of Apartment Rentals in Jacksonville, Florida</H1>
+                    <p class = textCardBody>In this project, I scraped real estate listings from Apartments.com for the Jacksonville area using Selenium and BeautifulSoup. After collecting the data, I cleaned and processed it, extracting geospatial information with Geopy's ArcGIS.
+
+                        To visualize key trends, I created scatter plots with different hues representing variables such as price, number of bedrooms, and square footage. I then applied K-means clustering to group the apartments into distinct Jacksonville neighborhoods and labeled them accordingly. To investigate price differences between these clusters, I conducted an ANOVA test followed by post-hoc analysis.
+                        
+                        I also used KDE plots to examine apartment density across the city and within individual neighborhoods. Lastly, I built predictive models to estimate rental prices based on square footage and coordinates, testing several modeling approaches.
+                        
+                        The project concluded with insights on where a newly graduated bioscientist (like myself) might find affordable housing in Jacksonville.</p>
+                </div>
+                <div class="stackCard">
+                    <div class="Tab">
+                        <div class="tabLink" onclick="openTab(event, 'apartments', 'NIRStack')">Stack</div>
+                        <div class="tabLink" onclick="openTab(event, 'apartments', 'NIRResults')">Results</div>
+                    </div>
+                    <div class="tabContent" id="NIRStack">
+                        <div style="margin-bottom: 2%;">
+                            <h3>Languages</h3>
+                            <p>Python</p>
+                        </div>
+                        <div>
+                            <h3>Packages</h3>
+                            <p>Selenium, BeautifulSoup, Geopy, Pandas, Numpy, Seaborn, Matplotlib, Shapely, Contextily, SKLearn, SciPy, StatsModels, </p>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="NIRResults">
+                        While the model was successfully developed and the data pipeline established, the results did not reveal a clear correlation between the NIR spectra and specific gravity in this dataset. Potential factors such as excessive noise, incorrect data collection processes, or suboptimal wavelength selection likely impacted the model’s performance. Despite these challenges, the system has been fully set up, meaning that when more accurate data becomes available in the next season, it can be seamlessly integrated to produce reliable predictions.
+                    </div>
+                </div>
+                <div class="photoCard">
+                    <div class="photoWrapper">
+                        <img  class="projImg" src="Images\apartmentsKMeans.png" id="First" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images\apartmentsKDE.png" id="second" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images\apartmentsCorr.png" id="third" onclick="this.requestFullscreen()">
+                    </div>
+                    <div class="photoTabs">
+                        <div class="photoLink" onclick="openImage(event, 'apartments', 'First')">1</div>
+                        <div class="photoLink" onclick="openImage(event, 'apartments', 'second')">2</div>
+                        <div class="photoLink" onclick="openImage(event, 'apartments', 'third')">3</div>
+                    </div>
+                </div>
+            </div>
             <div class="projectWrapper", id="potatoNIR">
                 <div class="textCard">
                     <H1 class="textCardTitle">Predicting Specific Gravity in Potatoes Using Near-Infrared Spectroscopy</H1>

@@ -163,6 +163,11 @@ h3 {
     background-position: 30% 30%;
     background-size: cover;
 }
+#apartments {
+    background-image: url("Images/apartmentsBackground.png");
+    background-position: center;
+    background-size: 100%;
+}
 
 #treeTags {
     background-image: url("Images/Oranges.jpg");

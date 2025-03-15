@@ -14,7 +14,7 @@
             <div><a class = "navButton" href="index.html">Home</a></div>
         </div>
         <div class="projectsBody">
-            <div class="projectWrapper", id="apartments">
+            <div class="projectWrapper" id="apartments">
                 <div class="textCard">
                     <H1 class="textCardTitle">Analysis of Apartment Rentals in Jacksonville, Florida</H1>
                     <p class = textCardBody>In this project, I scraped real estate listings from Apartments.com for the Jacksonville area using Selenium and BeautifulSoup. After collecting the data, I cleaned and processed it, extracting geospatial information with Geopy's ArcGIS.
@@ -27,10 +27,10 @@
                 </div>
                 <div class="stackCard">
                     <div class="Tab">
-                        <div class="tabLink" onclick="openTab(event, 'apartments', 'NIRStack')">Stack</div>
-                        <div class="tabLink" onclick="openTab(event, 'apartments', 'NIRResults')">Results</div>
+                        <div class="tabLink" onclick="openTab(event, 'apartments', 'apartmentStack')">Stack</div>
+                        <div class="tabLink" onclick="openTab(event, 'apartments', 'apartmentResults')">Results</div>
                     </div>
-                    <div class="tabContent" id="NIRStack">
+                    <div class="tabContent" id="apartmentStack">
                         <div style="margin-bottom: 2%;">
                             <h3>Languages</h3>
                             <p>Python</p>
@@ -40,20 +40,20 @@
                             <p>Selenium, BeautifulSoup, Geopy, Pandas, Numpy, Seaborn, Matplotlib, Shapely, Contextily, SKLearn, SciPy, StatsModels, </p>
                         </div>
                     </div>
-                    <div class="tabContent" id="NIRResults">
-                        While the model was successfully developed and the data pipeline established, the results did not reveal a clear correlation between the NIR spectra and specific gravity in this dataset. Potential factors such as excessive noise, incorrect data collection processes, or suboptimal wavelength selection likely impacted the model’s performance. Despite these challenges, the system has been fully set up, meaning that when more accurate data becomes available in the next season, it can be seamlessly integrated to produce reliable predictions.
+                    <div class="tabContent" id="apartmentResults">
+                        The analysis provided valuable insights into Jacksonville’s rental market. The K-means clustering successfully grouped apartments into distinct neighborhoods, revealing patterns in pricing and availability. The ANOVA test confirmed statistically significant price differences between these clusters, while post-hoc analysis identified which neighborhoods were more affordable. KDE plots highlighted areas with the highest apartment density, offering a clear visual representation of rental hotspots. Finally, the predictive models, with Random Forest performing best, provided accurate price estimates based on square footage and location, helping to identify cost-effective housing options for recent graduates like myself.
                     </div>
                 </div>
                 <div class="photoCard">
                     <div class="photoWrapper">
-                        <img  class="projImg" src="Images\apartmentsKMeans.png" id="First" onclick="this.requestFullscreen()">
-                        <img  class="projImg" src="Images\apartmentsKDE.png" id="second" onclick="this.requestFullscreen()">
-                        <img  class="projImg" src="Images\apartmentsCorr.png" id="third" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images/apartmentsKMeans.png" id="KMeans" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images/apartmentsKDE.png" id="KDE" onclick="this.requestFullscreen()">
+                        <img  class="projImg" src="Images/apartmentsCorr.png" id="Corr" onclick="this.requestFullscreen()">
                     </div>
                     <div class="photoTabs">
-                        <div class="photoLink" onclick="openImage(event, 'apartments', 'First')">1</div>
-                        <div class="photoLink" onclick="openImage(event, 'apartments', 'second')">2</div>
-                        <div class="photoLink" onclick="openImage(event, 'apartments', 'third')">3</div>
+                        <div class="photoLink" onclick="openImage(event, 'apartments', 'KMeans')">1</div>
+                        <div class="photoLink" onclick="openImage(event, 'apartments', 'KDE')">2</div>
+                        <div class="photoLink" onclick="openImage(event, 'apartments', 'Corr')">3</div>
                     </div>
                 </div>
             </div>

@@ -253,7 +253,9 @@ h3 {
     display: none;
     padding: 2%;
 }
-
+#apartmentStack {
+    display: block;
+}
 #NIRStack {
     display: block;
 }
@@ -308,7 +310,9 @@ h3 {
     width: 50%;
     box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 0.41);
 }
-
+#KMeans {
+    display:block;
+}
 #First {
     display:block;
 }

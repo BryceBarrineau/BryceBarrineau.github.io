@@ -361,3 +361,18 @@ h3 {
 .photoLink:active {
     background-color: #ccc;
 }
+
+.githubLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #5865F2; /* Discord blue */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.githubLink:hover {
+    background-color: #404eed;
+}

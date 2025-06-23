@@ -158,6 +158,13 @@ h3 {
     box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 0.41);
 }
 
+
+#aquariumChecker {
+    background-image: url("Images/aquariumCheckerBackground.png");
+    background-position: 30% 30%;
+    background-size: cover;
+}
+
 #potatoNIR {
     background-image: url("Images/Potatoes.jpg");
     background-position: 30% 30%;
@@ -253,6 +260,11 @@ h3 {
     display: none;
     padding: 2%;
 }
+
+#aqStack {
+    display: block;
+}
+
 #apartmentStack {
     display: block;
 }
@@ -321,6 +333,14 @@ h3 {
 }
 #Eins {
     display:block;
+}
+
+#aqOne {
+    display: block;
+}
+#aqTwo,
+#aqThree {
+    display: none;
 }
 
 .photoTabs {

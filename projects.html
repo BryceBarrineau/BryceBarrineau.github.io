@@ -14,6 +14,47 @@
             <div><a class = "navButton" href="index.html">Home</a></div>
         </div>
         <div class="projectsBody">
+            <div class="projectWrapper" id="aquariumChecker">
+    <div class="textCard">
+        <h1 class="textCardTitle">AquariumChecker: Discord-Connected Webcam Monitor for Aquariums</h1>
+        <p class="textCardBody">
+            AquariumChecker is a Python application that uses a webcam to monitor aquarium conditions and send updates through a Discord bot. With built-in detection for specific marine species (e.g., chocolate chip starfish and green bubble tip anemones), it helps remotely track and manage reef-safe habitats. The app applies color correction and image processing filters to improve visibility, and supports both GUI-triggered and Discord-triggered image sharing.
+        </p>
+        <a href="https://github.com/BryceBarrineau/aquariumChecker" target="_blank" class="githubLink">🔗 View on GitHub</a>
+    </div>
+    <div class="stackCard">
+        <div class="Tab">
+            <div class="tabLink" onclick="openTab(event, 'aquariumChecker', 'aqStack')">Stack</div>
+            <div class="tabLink" onclick="openTab(event, 'aquariumChecker', 'aqResults')">Results</div>
+        </div>
+        <div class="tabContent" id="aqStack">
+            <div style="margin-bottom: 2%;">
+                <h3>Languages</h3>
+                <p>Python</p>
+            </div>
+            <div>
+                <h3>Packages</h3>
+                <p>OpenCV, PyQt6, discord.py, NumPy, Pillow, imutils, pyautogui</p>
+            </div>
+        </div>
+        <div class="tabContent" id="aqResults">
+            The app enables remote aquarium monitoring by sending real-time snapshots or GIFs on demand. It supports both user interface control and Discord command input, allowing flexibility for daily aquarium checks or species tracking.
+        </div>
+    </div>
+    <div class="photoCard">
+        <div class="photoWrapper">
+            <img class="projImg" src="Images/aquariumChecker1.jpg" id="aqOne" onclick="this.requestFullscreen()">
+            <img class="projImg" src="Images/aquariumChecker2.png" id="aqTwo" onclick="this.requestFullscreen()">
+            <img class="projImg" src="Images/aquariumChecker3.png" id="aqThree" onclick="this.requestFullscreen()">
+        </div>
+        <div class="photoTabs">
+            <div class="photoLink" onclick="openImage(event, 'aquariumChecker', 'aqOne')">1</div>
+            <div class="photoLink" onclick="openImage(event, 'aquariumChecker', 'aqTwo')">2</div>
+            <div class="photoLink" onclick="openImage(event, 'aquariumChecker', 'aqThree')">3</div>
+        </div>
+    </div>
+</div>
+
             <div class="projectWrapper" id="apartments">
                 <div class="textCard">
                     <H1 class="textCardTitle">Analysis of Apartment Rentals in Jacksonville, Florida</H1>

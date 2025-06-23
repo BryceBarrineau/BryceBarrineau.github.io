@@ -161,6 +161,7 @@ h3 {
 
 #aquariumChecker {
     background-image: url("Images/aquariumCheckerBackground.png");
+    background-color: #006D77;
     background-position: 30% 30%;
     background-size: cover;
 }
